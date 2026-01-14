@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Osam-Frimpong - Radiology Resident & Software Engineer">
+    <title>Dr. Osam-Frimpong | Radiology Resident & Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'royal-blue': {
+                            DEFAULT: '#4169E1',
+                            dark: '#2952CC',
+                            light: '#6B8EF5',
+                            lighter: '#E8EEFF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Product Sans', 'Google Sans', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        @font-face {
+            font-family: 'Product Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/productsans/v9/pxiDypQkot1TnFhsFMOfGShVF9eO.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'Product Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/productsans/v9/pxicypQkot1TnFhsFMOfGShd5PSbS2lBkm8.woff2) format('woff2');
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        @keyframes scroll {
+            0% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease;
+        }
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        .mouse::before {
+            content: '';
+            width: 4px;
+            height: 10px;
+            background: #4169E1;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            animation: scroll 2s infinite;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-royal-blue">Dr. Osam-Frimpong</div>
+            <ul class="hidden md:flex gap-8 list-none">
+                <li><a href="#home" class="nav-link text-gray-700 font-medium hover:text-royal-blue transition-colors duration-300 relative group">
+                    Home
+                    <span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-royal-blue transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="#about" class="nav-link text-gray-700 font-medium hover:text-royal-blue transition-colors duration-300 relative group">
+                    About
+                    <span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-royal-blue transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="#portfolio" class="nav-link text-gray-700 font-medium hover:text-royal-blue transition-colors duration-300 relative group">
+                    Portfolio
+                    <span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-royal-blue transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="#contact" class="nav-link text-gray-700 font-medium hover:text-royal-blue transition-colors duration-300 relative group">
+                    Contact
+                    <span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-royal-blue transition-all duration-300 group-hover:w-full"></span>
+                </a></li>
+                <li><a href="resume.html" class="px-6 py-2 bg-royal-blue text-white rounded-full font-medium hover:bg-royal-blue-dark transition-all duration-300">Resume</a></li>
+            </ul>
+            <div class="hamburger md:hidden flex flex-col gap-1 cursor-pointer">
+                <span class="w-6 h-0.5 bg-royal-blue rounded transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-royal-blue rounded transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-royal-blue rounded transition-all duration-300"></span>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <ul class="nav-menu md:hidden fixed left-[-100%] top-[70px] flex-col bg-white w-full text-center transition-all duration-300 shadow-md py-8 gap-0">
+            <li class="py-4"><a href="#home" class="nav-link text-gray-700 font-medium hover:text-royal-blue transition-colors duration-300">Home</a></li>
+            <li class="py-4"><a href="#about" class="nav-link text-gray-700 font-medium hover:text-royal-blue transition-colors duration-300">About</a></li>
+            <li class="py-4"><a href="#portfolio" class="nav-link text-gray-700 font-medium hover:text-royal-blue transition-colors duration-300">Portfolio</a></li>
+            <li class="py-4"><a href="#contact" class="nav-link text-gray-700 font-medium hover:text-royal-blue transition-colors duration-300">Contact</a></li>
+            <li class="py-4"><a href="resume.html" class="text-royal-blue font-semibold hover:text-royal-blue-dark transition-colors duration-300">View Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-royal-blue-lighter to-white relative pt-20">
+        <div class="text-center max-w-4xl px-8">
+            <div class="animate-fadeInUp">
+                <span class="block text-xl text-gray-600 mb-2 font-normal">Hello, I'm</span>
+                <h1 class="text-6xl md:text-7xl font-bold text-royal-blue mb-4">Dr. Osam-Frimpong</h1>
+            </div>
+            <p class="text-3xl text-gray-800 mb-6 font-medium animate-fadeInUp" style="animation-delay: 0.2s;">Radiology Resident & Software Engineer</p>
+            <p class="text-lg text-gray-600 mb-10 leading-relaxed animate-fadeInUp" style="animation-delay: 0.4s;">
+                Bridging the intersection of medicine and technology, I'm training in radiology 
+                while crafting innovative digital solutions that make a difference.
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap animate-fadeInUp" style="animation-delay: 0.6s;">
+                <a href="#portfolio" class="px-8 py-3.5 bg-royal-blue text-white rounded-full font-semibold transition-all duration-300 hover:bg-royal-blue-dark hover:-translate-y-0.5 hover:shadow-lg">View My Work</a>
+                <a href="resume.html" class="px-8 py-3.5 bg-transparent text-royal-blue border-2 border-royal-blue rounded-full font-semibold transition-all duration-300 hover:bg-royal-blue hover:text-white hover:-translate-y-0.5 inline-flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    View Resume
+                </a>
+                <a href="#contact" class="px-8 py-3.5 bg-transparent text-royal-blue border-2 border-royal-blue rounded-full font-semibold transition-all duration-300 hover:bg-royal-blue hover:text-white hover:-translate-y-0.5">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2">
+            <div class="mouse w-8 h-12 border-2 border-royal-blue rounded-2xl relative"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-800 relative">About Me</h2>
+            <div class="w-16 h-1 bg-royal-blue mx-auto mb-12 rounded"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-gray-50 p-10 rounded-2xl text-center transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl border-2 border-transparent hover:border-royal-blue-light hover:bg-white">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-royal-blue-lighter rounded-full flex items-center justify-center text-royal-blue transition-all duration-300 hover:bg-royal-blue hover:text-white hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl mb-4 text-gray-800">Medical Training</h3>
+                    <p class="text-gray-600 leading-relaxed">Radiology Resident developing expertise in diagnostic imaging, committed to delivering accurate and timely diagnoses for optimal patient care.</p>
+                </div>
+
+                <div class="bg-gray-50 p-10 rounded-2xl text-center transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl border-2 border-transparent hover:border-royal-blue-light hover:bg-white">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-royal-blue-lighter rounded-full flex items-center justify-center text-royal-blue transition-all duration-300 hover:bg-royal-blue hover:text-white hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl mb-4 text-gray-800">Software Engineering</h3>
+                    <p class="text-gray-600 leading-relaxed">Full-stack developer creating elegant, user-centric applications. Passionate about building solutions that combine technical excellence with practical utility.</p>
+                </div>
+
+                <div class="bg-gray-50 p-10 rounded-2xl text-center transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl border-2 border-transparent hover:border-royal-blue-light hover:bg-white">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-royal-blue-lighter rounded-full flex items-center justify-center text-royal-blue transition-all duration-300 hover:bg-royal-blue hover:text-white hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl mb-4 text-gray-800">Innovation</h3>
+                    <p class="text-gray-600 leading-relaxed">Leveraging technology to enhance healthcare delivery, streamline workflows, and create impactful digital experiences across web and mobile platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Portfolio</h2>
+            <div class="w-16 h-1 bg-royal-blue mx-auto mb-4 rounded"></div>
+            <p class="text-center text-gray-600 text-lg mb-12">A showcase of mobile and web applications I've built</p>
+            
+            <div class="flex justify-center gap-4 mb-12 flex-wrap">
+                <button class="filter-btn px-6 py-3 border-2 border-royal-blue bg-royal-blue text-white rounded-full cursor-pointer font-semibold transition-all duration-300" data-filter="all">All Projects</button>
+                <button class="filter-btn px-6 py-3 border-2 border-royal-blue bg-transparent text-royal-blue rounded-full cursor-pointer font-semibold transition-all duration-300" data-filter="web">Web Apps</button>
+                <button class="filter-btn px-6 py-3 border-2 border-royal-blue bg-transparent text-royal-blue rounded-full cursor-pointer font-semibold transition-all duration-300" data-filter="mobile">Mobile Apps</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ReshScore -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl" data-category="web">
+                    <div class="w-full h-64 bg-royal-blue-lighter flex items-center justify-center text-royal-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-gray-800">ReshScore</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">A comprehensive credit scoring system for individuals, organizations, banks, and businesses, providing accurate creditworthiness assessments and financial risk evaluation tools.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">React</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">MySQL</span>
+                        </div>
+                        <a href="https://reshscore.com" target="_blank" rel="noopener noreferrer" class="text-royal-blue font-semibold inline-flex items-center transition-all duration-300 hover:text-royal-blue-dark hover:translate-x-1">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Novaci Health -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl" data-category="web">
+                    <div class="w-full h-64 bg-royal-blue-lighter flex items-center justify-center text-royal-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-gray-800">Novaci Health</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">A modern hospital management system providing comprehensive healthcare services with patient-centered care, advanced diagnostics, and professional medical expertise in Kumasi, Ghana.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">React</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">MySQL</span>
+                        </div>
+                        <a href="https://thenovaci.com" target="_blank" rel="noopener noreferrer" class="text-royal-blue font-semibold inline-flex items-center transition-all duration-300 hover:text-royal-blue-dark hover:translate-x-1">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Biggies Lounge -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl" data-category="web">
+                    <div class="w-full h-64 bg-royal-blue-lighter flex items-center justify-center text-royal-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-gray-800">Biggies Lounge</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">A comprehensive restaurant and lounge management system featuring online ordering, table reservations, menu management, and integrated payment processing for seamless hospitality operations.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">React</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">MySQL</span>
+                        </div>
+                        <a href="https://biggieslounge.com" target="_blank" rel="noopener noreferrer" class="text-royal-blue font-semibold inline-flex items-center transition-all duration-300 hover:text-royal-blue-dark hover:translate-x-1">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Ghana Association of Radiologists -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl" data-category="web">
+                    <div class="w-full h-64 bg-royal-blue-lighter flex items-center justify-center text-royal-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-gray-800">Ghana Association of Radiologists</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Official platform for Ghana's radiology community featuring membership management, AGSM event registration, clinical tools, research abstracts, educational resources, and professional networking for radiologists.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">React</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">MySQL</span>
+                        </div>
+                        <a href="https://ghradiologists.org" target="_blank" rel="noopener noreferrer" class="text-royal-blue font-semibold inline-flex items-center transition-all duration-300 hover:text-royal-blue-dark hover:translate-x-1">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Daakpe -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl" data-category="web">
+                    <div class="w-full h-64 bg-royal-blue-lighter flex items-center justify-center text-royal-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-gray-800">Daakpe</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">A fundraising and appreciation platform enabling individuals and organizations to raise funds and express gratitude, fostering community support and meaningful giving experiences.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">React</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">MySQL</span>
+                        </div>
+                        <a href="https://daakpe.com" target="_blank" rel="noopener noreferrer" class="text-royal-blue font-semibold inline-flex items-center transition-all duration-300 hover:text-royal-blue-dark hover:translate-x-1">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Meler -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl" data-category="mobile">
+                    <div class="w-full h-64 bg-royal-blue-lighter flex items-center justify-center text-royal-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-gray-800">Meler</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">A location-based feed posting mobile application enabling users to share and discover content based on their geographical location, fostering local community engagement.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Flutter</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">MySQL</span>
+                        </div>
+                        <a href="#contact" class="text-royal-blue font-semibold inline-flex items-center transition-all duration-300 hover:text-royal-blue-dark hover:translate-x-1">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- UHAS SRC Mobile App -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl" data-category="mobile">
+                    <div class="w-full h-64 bg-royal-blue-lighter flex items-center justify-center text-royal-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-gray-800">UHAS SRC Mobile App</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Official mobile application for the University of Health and Allied Sciences Student Representative Council, streamlining student governance and campus communication.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Flutter</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">MySQL</span>
+                        </div>
+                        <a href="#contact" class="text-royal-blue font-semibold inline-flex items-center transition-all duration-300 hover:text-royal-blue-dark hover:translate-x-1">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Haven App -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl" data-category="mobile">
+                    <div class="w-full h-64 bg-royal-blue-lighter flex items-center justify-center text-royal-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-gray-800">Haven App</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">A comprehensive mental health application providing support, resources, and tools to help users manage their mental wellbeing and access professional guidance.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Flutter</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Mental Health</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Healthcare</span>
+                        </div>
+                        <a href="#contact" class="text-royal-blue font-semibold inline-flex items-center transition-all duration-300 hover:text-royal-blue-dark hover:translate-x-1">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- STG App -->
+                <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl" data-category="mobile">
+                    <div class="w-full h-64 bg-royal-blue-lighter flex items-center justify-center text-royal-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-3 text-gray-800">STG - Standard Treatment Guidelines</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Mobile application providing healthcare professionals in Ghana with quick access to standardized treatment protocols and clinical guidelines for evidence-based patient care.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Flutter</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Medical</span>
+                            <span class="px-3 py-1 bg-royal-blue-lighter text-royal-blue rounded-full text-sm font-medium">Ghana</span>
+                        </div>
+                        <a href="#contact" class="text-royal-blue font-semibold inline-flex items-center transition-all duration-300 hover:text-royal-blue-dark hover:translate-x-1">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Get In Touch</h2>
+            <div class="w-16 h-1 bg-royal-blue mx-auto mb-4 rounded"></div>
+            <p class="text-center text-gray-600 text-lg mb-12">Let's discuss how we can work together</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+                <div class="flex flex-col gap-8">
+                    <div class="flex gap-6 items-start">
+                        <div class="w-12 h-12 bg-royal-blue-lighter rounded-full flex items-center justify-center text-royal-blue flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg mb-1 text-gray-800">Email</h4>
+                            <p class="text-gray-600">osamfrimpong@outlook.com</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div class="w-12 h-12 bg-royal-blue-lighter rounded-full flex items-center justify-center text-royal-blue flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg mb-1 text-gray-800">LinkedIn</h4>
+                            <p class="text-gray-600">linkedin.com/in/schandorf-osam-frimpong-md-290958192</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div class="w-12 h-12 bg-royal-blue-lighter rounded-full flex items-center justify-center text-royal-blue flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg mb-1 text-gray-800">GitHub</h4>
+                            <p class="text-gray-600">github.com/osamfrimpong</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div class="w-12 h-12 bg-royal-blue-lighter rounded-full flex items-center justify-center text-royal-blue flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg mb-1 text-gray-800">Instagram</h4>
+                            <p class="text-gray-600">@osam_frimpong</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div class="w-12 h-12 bg-royal-blue-lighter rounded-full flex items-center justify-center text-royal-blue flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg mb-1 text-gray-800">Facebook</h4>
+                            <p class="text-gray-600">facebook.com/osamfrimpong</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-10 rounded-2xl border-2 border-gray-200 transition-all duration-300 hover:border-royal-blue-light hover:shadow-xl">
+                    <h3 class="text-3xl mb-4 text-gray-800">Let's Connect</h3>
+                    <p class="text-gray-600 leading-relaxed mb-8">I'm always interested in discussing new projects, opportunities in healthcare technology, or collaborations. Feel free to reach out through any of the channels listed.</p>
+                    <div class="flex flex-col gap-4">
+                        <a href="mailto:osamfrimpong@outlook.com" class="px-8 py-3.5 bg-royal-blue text-white rounded-full font-semibold transition-all duration-300 hover:bg-royal-blue-dark hover:-translate-y-0.5 hover:shadow-lg text-center">Email Me</a>
+                        <a href="https://www.linkedin.com/in/schandorf-osam-frimpong-md-290958192/" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 bg-transparent text-royal-blue border-2 border-royal-blue rounded-full font-semibold transition-all duration-300 hover:bg-royal-blue hover:text-white hover:-translate-y-0.5 text-center">Connect on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 text-center">
+        <div class="max-w-7xl mx-auto px-5 flex justify-between items-center flex-wrap gap-4">
+            <p>&copy; 2026 Dr. Osam-Frimpong. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="https://www.linkedin.com/in/schandorf-osam-frimpong-md-290958192/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:bg-royal-blue hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://github.com/osamfrimpong" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:bg-royal-blue hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/osamfrimpong" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:bg-royal-blue hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/osam_frimpong" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:bg-royal-blue hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://facebook.com/osamfrimpong" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:bg-royal-blue hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
