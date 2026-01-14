@@ -62,6 +62,19 @@ Native Android (Java/Kotlin)
 3. **Haven App** - Comprehensive mental health application providing support and professional guidance (Flutter)
 4. **STG - Standard Treatment Guidelines** - Medical app providing healthcare professionals in Ghana with standardized treatment protocols (Flutter)
 
+## Software Work Experience
+
+### Freelance Engineer (January 2016 - Present)
+- Built both frontend and backend of mobile apps with JAVA/XML for clients
+- Built web apps (front and backends) with PHP/Laravel for clients
+- Developed cross-platform mobile applications using Flutter/Dart
+- Created full-stack web applications using modern frameworks and technologies
+
+### Software Developer at PC Boss ICT Solutions | Ho | Fulltime (January 2018 - January 2020)
+- Built both frontend and backend of mobile apps with JAVA/Kotlin/XML for clients
+- Developed cross-platform mobile apps with Dart/Flutter for clients
+- Built web apps (handles all backend logic) for clients
+
 ## Medical Experience
 
 - **Komfo Anokye Teaching Hospital** - Residency, Radiology (September 2024 - Present)
