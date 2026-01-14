@@ -82,34 +82,6 @@ Native Android (Java/Kotlin)
 - **Instagram**: [@osam_frimpong](https://instagram.com/osam_frimpong)
 - **Facebook**: [facebook.com/osamfrimpong](https://facebook.com/osamfrimpong)
 
-## Website Features
-
-This portfolio website includes:
-
-- **Responsive Design** - Works seamlessly on all devices
-- **Interactive Portfolio** - Filterable project showcase (All/Web/Mobile)
-- **Web Resume** - Professional online resume with print/PDF functionality
-- **Contact Section** - Direct links to email and social media
-- **Modern UI** - Built with Tailwind CSS and Google Sans font
-- **Royal Blue Theme** - Professional color scheme throughout
-
-## Technologies Used
-
-- **Frontend**: HTML5, Tailwind CSS, Vanilla JavaScript
-- **Font**: Google Sans (Product Sans)
-- **Hosting**: GitHub Pages
-- **Design**: Responsive, mobile-first approach
-
-## Deployment
-
-This website is deployed on GitHub Pages at: `https://osamfrimpong.github.io`
-
-To deploy updates:
-```bash
-git add .
-git commit -m "Update portfolio"
-git push origin main
-```
 
 ## Professional Interests
 
